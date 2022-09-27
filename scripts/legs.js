@@ -8,7 +8,7 @@ document.addEventListener("change", (event) => {
     }
 })
 
-export const Powers = () => {
+export const Legs = () => {
 
     let html = `<ul>
         ${legs.map(leg => {
