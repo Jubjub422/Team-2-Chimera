@@ -32,5 +32,44 @@ const database = {
     { id: 1, size: "Lightning Breath" },
     { id: 2, size: "Ice Breath" },
     { id: 3, size: "Fire Breath" }
-  ]
+  ],
+  completedMonsters: [],
+  buildMonster: {}
 };
+
+export const getHeads = () => {
+  return database.heads.map(head => ({...head}))
+}
+export const getTails = () => {
+  return database.tails.map(tail => ({...tail}))
+}
+export const getTorsos = () => {
+  return database.torsos.map(torso => ({...torso}))
+}
+export const getLegs = () => {
+  return database.legs.map(leg => ({...leg}))
+}
+export const getArms = () => {
+  return database.arms.map(arm => ({...arm}))
+}
+export const getPowers = () => {
+  return database.powers.map(power => ({...power}))
+}
+export const setHead = (id) => {
+  database.buildMonster.headId = id
+}
+export const setTail = (id) => {
+  database.buildMonster.tailId = id
+}
+export const setArm = (id) => {
+  database.buildMonster.armId = id
+}
+export const setLeg = (id) => {
+  database.buildMonster.legId = id
+}
+export const setTorso = (id) => {
+  database.buildMonster.torsoId = id
+}
+export const setPower = (id) => {
+  database.buildMonster.powerId = id
+}
