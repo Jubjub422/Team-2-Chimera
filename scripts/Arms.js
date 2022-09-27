@@ -1,22 +1,25 @@
-import { getArms, setArms } from "./database.js"
+import { getArms, setArm } from "./database.js"
+
+const arms = getArms()
 
 export const Arms = () => {
-    const arms = getArms()
 
-    let html = `<h4 id="arms-h4">Arms</h4>
-    <div class="choice-div">`
+    let html = `<div class="choice-div">
+    <h4 id="arms-h4" style="margin-bottom: 0">Arms</h4>`
 
     html += arms.map(arm => {
-        return `<label for="arm">${arm.name}</label>
-        <input name="arm" value="${arm.id}" />`
-    })
+        return `<input type="radio" name="arm" value="${arm.id}" />
+        <label for="arm">${arm.name}</label>`
+    }).join("")
+
+    return html += `</div>`
 }
 
 document.addEventListener(
     "change",
     event => {
         if (event.target.name === "arm") {
-            setArms(parseInt(event.target.value))
+            setArm(parseInt(event.target.value))
         }
     }
 )
