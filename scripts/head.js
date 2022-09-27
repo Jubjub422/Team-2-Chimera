@@ -17,7 +17,7 @@ export const ChimeraHeads = () => {
     // Use .map() for converting objects to <li> elements
     const listItems = heads.map(head => {
         return `<li>
-        <input type="radio" name="head" value="${head.id}"/> ${head.head}
+        <input type="radio" name="head" value="${head.id}"/> ${head.name}
         </li>`
     })
 
