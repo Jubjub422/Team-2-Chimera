@@ -1,4 +1,4 @@
-import { getArms, setArm } from "./database";
+import { getArms, setArm } from "./database.js";
 
 const arms = getArms()
 

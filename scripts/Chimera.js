@@ -1,13 +1,15 @@
 // Add Imports Here
 import { Heads } from "./head.js"
+import { Torsos } from "./torso.js"
 import { Arms } from "./arm.js"
+import { Legs } from "./leg.js"
 import { Tails } from "./tail.js"
 import { Powers } from "./power.js"
-import { Torsos } from "./torso.js"
 
 
 export const Chimera = () => {
-    return `<div class="choice-div">
+    return `<h1>Create a Chimera</h1>
+    <div class="choice-div">
         <h3>Heads</h3>
         ${ Heads() }
     </div>
@@ -31,7 +33,9 @@ export const Chimera = () => {
         <h3>Powers</h3>
         ${ Powers() }
     </div>
-    <div class="choice-div">
+    <button type="button" id="order-btn">Create Order</button>
+    
+    <div id="orders-div">
     
     </div>`
 }

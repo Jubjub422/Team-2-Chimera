@@ -1,4 +1,4 @@
-import { getTails, setTail } from "./database";
+import { getTails, setTail } from "./database.js";
 
 const tails = getTails()
 
