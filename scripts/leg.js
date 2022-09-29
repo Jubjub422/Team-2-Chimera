@@ -1,4 +1,4 @@
-import { getLegs, setLeg } from "./database";
+import { getLegs, setLeg } from "./database.js";
 
 const legs = getLegs()
 
