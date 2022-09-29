@@ -33,7 +33,15 @@ const database = {
     { id: 2, size: "Ice Breath" },
     { id: 3, size: "Fire Breath" }
   ],
-  completedMonsters: [],
+  completedMonsters: [{
+    id: 1,
+    headId: 1,
+    torsoId: 1,
+    legId: 1,
+    tailId: 1,
+    armId: 1,
+    powerId: 1
+  }],
   buildMonster: {}
 };
 
@@ -72,4 +80,17 @@ export const setTorso = (id) => {
 }
 export const setPower = (id) => {
   database.buildMonster.powerId = id
+}
+
+export const createChimera = () => {
+  const newChimera = {...database.buildMonster}
+
+  const lastIndex = database.completedMonsters.length - 1
+  newChimera.id = database.completedMonsters[lastIndex].id + 1
+
+  database.completedMonsters.push(newChimera)
+
+  database.completedMonsters = {}
+
+  document.dispatchEvent(new CustomEvent("stateChanged"))
 }
