@@ -1,10 +1,10 @@
-import { getPowers, setPowers } from "./database.js"
+import { getPowers, setPower } from "./database.js"
 const powers = getPowers()
 
 
 document.addEventListener("change", (event) => {
     if (event.target.name === "power") {
-        setPowers(parseInt(event.target.value))
+        setPower(parseInt(event.target.value))
     }
 })
 
